@@ -1,0 +1,98 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[polish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{indentfirst}
+\linespread{1.25}
+
+\usepackage[backend=biber, style=apa, citestyle=authoryear]{biblatex}
+\addbibresource{bibliografia.bib}
+\usepackage{hyperref}
+
+\usepackage{anysize}
+\marginsize{3.5cm}{2.5cm}{2.5cm}{2.5cm}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\thepage}
+\lhead{\nouppercase{\itshape\leftmark}}
+
+\fancypagestyle{firststyle}
+{
+   \fancyhf{}
+   \rhead{\thepage}
+   \renewcommand\headrulewidth{0pt}
+}
+
+\newcommand{\authorname}{Anna Jankowicz}
+\newcommand{\supname}{dr Magdalena Senderecka}
+\newcommand{\titlepl}{Technologie informacyjno-komunikacyjne\\w terapii dzieci ze spektrum autyzmu:\\gra wspomagająca rozwój umiejętności czytania ze zrozumieniem}
+\newcommand{\titleen}{Information and Communications Technology in Therapy for Children with Autism Spectrum Disorder: Game Improving Reading Comprehension}
+
+
+\title{\titlepl}
+\author{\authorname}
+\date{2019}
+
+\begin{document}
+
+\pagenumbering{roman}
+
+\thispagestyle{empty}
+
+\vspace*{1cm}
+{\centering\linespread{1.5}
+    {\Large Uniwersytet Jagielloński\\Wydział Filozoficzny\\
+        \uppercase{Instytut Filozofii}\\}
+    {\large Kierunek: Kognitywistyka\\Praca magisterska\\}
+}
+
+\vspace{1cm}
+\begin{minipage}[t]{0.4\textwidth}
+    \begin{flushleft} \large Nr albumu: 1111251\\ \end{flushleft}
+\end{minipage}
+\begin{minipage}[t]{0.4\textwidth}
+    \begin{flushright} \large Ocena:\\ \end{flushright}
+\end{minipage}
+\vspace{1cm}
+
+{\centering\linespread{1.5}\LARGE\textbf{\titlepl\\}}
+
+\vspace{2cm}
+\begin{minipage}[t]{0.4\textwidth}
+    \begin{flushleft} \large
+    \emph{Autor:}\\ \authorname
+    \end{flushleft}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+    \begin{flushright} \large
+    \emph{Promotor:}\\ \supname
+    \end{flushright}
+\end{minipage}
+\vspace{1.5cm}
+
+{\centering Opracowano zgodnie z obowiązującymi przepisami o prawie autorskim i prawach pokrewnych.\\ \vspace{0.7cm}\large{Kraków 2019\\}}
+
+
+\newpage
+\setcounter{page}{1}
+\thispagestyle{firststyle}
+Oświadczenie
+
+\include{abstrakt}
+\include{abstract}
+
+\tableofcontents
+\thispagestyle{firststyle}
+
+\include{rozdzialy/wstep}
+\include{rozdzialy/rozdzial1}
+\include{rozdzialy/rozdzial2}
+\include{rozdzialy/rozdzial3}
+\include{rozdzialy/zakonczenie}
+
+\printbibliography[heading=bibintoc]
+
+\end{document}
