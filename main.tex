@@ -4,14 +4,14 @@
 \usepackage[T1]{fontenc}
 \usepackage{mathptmx}
 \usepackage{indentfirst}
-\linespread{1.25}
+\linespread{1.5}
 
-\usepackage[backend=biber, style=apa, citestyle=authoryear]{biblatex}
+\usepackage[backend=biber, style=verbose-ibid, citestyle=authoryear-ibid]{biblatex}
 \addbibresource{bibliografia.bib}
 \usepackage{hyperref}
 
 \usepackage{anysize}
-\marginsize{3.5cm}{2.5cm}{2.5cm}{2.5cm}
+\marginsize{3.5cm}{1.6cm}{2.5cm}{2.5cm}
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -28,7 +28,7 @@
 
 \newcommand{\authorname}{Anna Jankowicz}
 \newcommand{\supname}{dr Magdalena Senderecka}
-\newcommand{\titlepl}{Technologie informacyjno-komunikacyjne\\w terapii dzieci ze spektrum autyzmu:\\gra wspomagająca rozwój umiejętności czytania ze zrozumieniem}
+\newcommand{\titlepl}{Technologie informacyjno-komunikacyjne\\w terapii dzieci ze spektrum autyzmu:\\gra wspomagająca rozwój umiejętności\\czytania ze zrozumieniem}
 \newcommand{\titleen}{Information and Communications Technology in Therapy for Children with Autism Spectrum Disorder: Game Improving Reading Comprehension}
 
 
@@ -42,7 +42,7 @@
 
 \thispagestyle{empty}
 
-\vspace*{1cm}
+\vspace*{0.5cm}
 {\centering\linespread{1.5}
     {\Large Uniwersytet Jagielloński\\Wydział Filozoficzny\\
         \uppercase{Instytut Filozofii}\\}
@@ -71,7 +71,7 @@
     \emph{Promotor:}\\ \supname
     \end{flushright}
 \end{minipage}
-\vspace{1.5cm}
+\vspace{1cm}
 
 {\centering Opracowano zgodnie z obowiązującymi przepisami o prawie autorskim i prawach pokrewnych.\\ \vspace{0.7cm}\large{Kraków 2019\\}}
 
@@ -79,7 +79,11 @@
 \newpage
 \setcounter{page}{1}
 \thispagestyle{firststyle}
-Oświadczenie
+\vspace*{10cm}
+\emph{\\\authorname\\ Numer albumu: 1111251\\}
+
+Oświadczam, że przedstawioną do oceny pracę magisterską, zatytułowaną
+,,Technologie informacyjno-komunikacyjne w terapii dzieci ze spektrum autyzmu: gra wspomagająca rozwój umiejętności czytania ze zrozumieniem'', wykonałam osobiście i po raz pierwszy poddaję ocenie.
 
 \include{abstrakt}
 \include{abstract}
@@ -93,6 +97,7 @@ Oświadczenie
 \include{rozdzialy/rozdzial3}
 \include{rozdzialy/zakonczenie}
 
-\printbibliography[heading=bibintoc]
+\renewcommand{\bibsetup}{\thispagestyle{firststyle}}
+{\linespread{1.25}\printbibliography[heading=bibintoc]}
 
 \end{document}
