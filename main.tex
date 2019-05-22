@@ -1,12 +1,18 @@
 \documentclass[a4paper,12pt]{report}
 \usepackage[utf8]{inputenc}
-\usepackage[polish]{babel}
+\usepackage{polski}
 \usepackage[T1]{fontenc}
 \usepackage{mathptmx}
 \usepackage{indentfirst}
 \linespread{1.5}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\graphicspath{ {obrazy/} }
+\usepackage[all]{nowidow}
 
-\usepackage[backend=biber, style=verbose-ibid, citestyle=authoryear-ibid]{biblatex}
+\usepackage[backend=biber, style=apa, citestyle=apa]{biblatex}
+\DeclareLanguageMapping{english}{english-apa}
 \addbibresource{bibliografia.bib}
 \usepackage{hyperref}
 
@@ -42,11 +48,16 @@
 
 \thispagestyle{empty}
 
-\vspace*{0.5cm}
-{\centering\linespread{1.5}
-    {\Large Uniwersytet Jagielloński\\Wydział Filozoficzny\\
-        \uppercase{Instytut Filozofii}\\}
-    {\large Kierunek: Kognitywistyka\\Praca magisterska\\}
+{\centering\linespread{1.05}
+    \textbf{
+    {\Large Uniwersytet Jagielloński\\}
+    {\large Wydział Filozoficzny\\
+      \uppercase{Instytut Filozofii}\\}
+      \textbf{Studia stacjonarne\\
+      Kierunek Kognitywistyka}\\
+    }
+    \vspace{0.5cm}    
+    {\large{Praca magisterska\\}}
 }
 
 \vspace{1cm}
@@ -56,24 +67,26 @@
 \begin{minipage}[t]{0.4\textwidth}
     \begin{flushright} \large Ocena:\\ \end{flushright}
 \end{minipage}
-\vspace{1cm}
 
-{\centering\linespread{1.5}\LARGE\textbf{\titlepl\\}}
+\vspace{0.3cm}
+{\centering\LARGE{\authorname\\}}
+\vspace{0.5cm}
+{\centering\linespread{1.15}\LARGE{TECHNOLOGIE INFORMACYJNO-KOMUNIKACYJNE W~TERAPII DZIECI Z ZABURZENIAMI ZE~SPEKTRUM AUTYZMU: GRA WSPOMAGAJĄCA ROZWÓJ UMIEJĘTNOŚCI CZYTANIA ZE ZROZUMIENIEM\\}}
 
-\vspace{2cm}
+\vspace{2.5cm}
 \begin{minipage}[t]{0.4\textwidth}
     \begin{flushleft} \large
-    \emph{Autor:}\\ \authorname
+    % \emph{Autor:}\\ \authorname
     \end{flushleft}
 \end{minipage}
 \begin{minipage}[t]{0.5\textwidth}
     \begin{flushright} \large
-    \emph{Promotor:}\\ \supname
+    Promotor pracy magisterskiej:\\ \supname
     \end{flushright}
 \end{minipage}
-\vspace{1.75cm}
+\vspace{2cm}
 
-{\centering Opracowano zgodnie z obowiązującymi przepisami o prawie autorskim i prawach pokrewnych.\\ \vspace{0.25cm}\large{Kraków 2019\\}}
+{\centering\small{Opracowano zgodnie z obowiązującymi przepisami o prawie autorskim i prawach pokrewnych.}\\ \vspace{0.25cm}\Large{Kraków 2019\\}}
 
 
 \newpage
@@ -90,6 +103,13 @@ Oświadczam, że przedstawioną do oceny pracę magisterską, zatytułowaną
 
 \tableofcontents
 \thispagestyle{firststyle}
+ 
+\listoftables
+\thispagestyle{firststyle}
+\begingroup
+\let\clearpage\relax
+\listoffigures
+\endgroup
 
 \include{rozdzialy/wstep}
 \include{rozdzialy/rozdzial1}
@@ -98,6 +118,6 @@ Oświadczam, że przedstawioną do oceny pracę magisterską, zatytułowaną
 \include{rozdzialy/zakonczenie}
 
 \renewcommand{\bibsetup}{\thispagestyle{firststyle}}
-{\linespread{1.25}\printbibliography[heading=bibintoc]}
+{\linespread{1.25}\printbibliography[title=Bibliografia, heading=bibintoc]}
 
 \end{document}
