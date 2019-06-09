@@ -10,6 +10,7 @@
 \usepackage{subcaption}
 \graphicspath{ {obrazy/} }
 \usepackage[all]{nowidow}
+\usepackage{float}
 
 \usepackage[backend=biber, style=apa, citestyle=apa]{biblatex}
 \DeclareLanguageMapping{english}{english-apa}
@@ -31,6 +32,11 @@
    \rhead{\thepage}
    \renewcommand\headrulewidth{0pt}
 }
+\fancypagestyle{plain}{%
+   \fancyhf{}
+   \rhead{\thepage}
+   \renewcommand\headrulewidth{0pt}
+}
 
 \newcommand{\authorname}{Anna Jankowicz}
 \newcommand{\supname}{dr Magdalena Senderecka}
@@ -44,7 +50,7 @@
 
 \begin{document}
 
-\pagenumbering{roman}
+% \pagenumbering{roman}
 
 \thispagestyle{empty}
 
@@ -54,7 +60,7 @@
     {\large Wydział Filozoficzny\\
       \uppercase{Instytut Filozofii}\\}
       \textbf{Studia stacjonarne\\
-      Kierunek Kognitywistyka}\\
+      Kierunek: Kognitywistyka}\\
     }
     \vspace{0.5cm}    
     {\large{Praca magisterska\\}}
@@ -88,24 +94,66 @@
 
 {\centering\small{Opracowano zgodnie z obowiązującymi przepisami o prawie autorskim i prawach pokrewnych.}\\ \vspace{0.25cm}\Large{Kraków 2019\\}}
 
-
 \newpage
-\setcounter{page}{1}
-\thispagestyle{firststyle}
-\vspace*{10cm}
-\emph{\\\authorname\\ Numer albumu: 1111251\\}
 
-Oświadczam, że przedstawioną do oceny pracę magisterską, zatytułowaną
-,,Technologie informacyjno-komunikacyjne w terapii dzieci z zaburzeniami ze spektrum autyzmu: gra wspomagająca rozwój umiejętności czytania ze zrozumieniem'', wykonałam osobiście i po raz pierwszy poddaję ocenie.
+\thispagestyle{empty}
+
+{\centering\linespread{1.05}
+    \textbf{
+    {\Large Jagiellonian University\\}
+    {\large Faculty of Philosophy\\
+      \uppercase{INSTITUTE OF PHILOSOPHY}\\}
+      \textbf{Full-time studies\\
+      Subject: Cognitive Science}\\
+    }
+    \vspace{0.5cm}    
+    {\large{Master's thesis\\}}
+}
+
+\vspace{1cm}
+\begin{minipage}[t]{0.4\textwidth}
+    \begin{flushleft} \large Index number: 1111251\\ \end{flushleft}
+\end{minipage}
+\begin{minipage}[t]{0.4\textwidth}
+    \begin{flushright} \large Grade:\\ \end{flushright}
+\end{minipage}
+
+\vspace{0.3cm}
+{\centering\LARGE{\authorname\\}}
+\vspace{0.5cm}
+{\centering\linespread{1.15}\LARGE{INFORMATION AND COMMUNICATION TECHNOLOGY IN THERAPY FOR CHILDREN WITH AUTISM SPECTRUM DISORDER: GAME IMPROVING READING COMPREHENSION\\}}
+
+\vspace{4.5cm}
+\begin{minipage}[t]{0.4\textwidth}
+    \begin{flushleft} \large
+    % \emph{Autor:}\\ \authorname
+    \end{flushleft}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+    \begin{flushright} \large
+    Supervisor of master's thesis:\\ \supname
+    \end{flushright}
+\end{minipage}
+\vspace{2cm}
+
+{\centering\small{Prepared in accordance with the Copyright Law.}\\ \vspace{0.25cm}\Large{Kraków 2019\\}}
+
+% \newpage
+
+% \setcounter{page}{1}
+% \thispagestyle{firststyle}
+% \vspace*{10cm}
+% \emph{\\\authorname\\ Numer albumu: 1111251\\}
+
+% Oświadczam, że przedstawioną do oceny pracę magisterską, zatytułowaną
+% ,,Technologie informacyjno-komunikacyjne w terapii dzieci z zaburzeniami ze spektrum autyzmu: gra wspomagająca rozwój umiejętności czytania ze zrozumieniem'', wykonałam osobiście i po raz pierwszy poddaję ocenie.
 
 \include{abstrakt}
-\include{abstract}
+% \include{abstract}
 
 \tableofcontents
-\thispagestyle{firststyle}
  
 \listoftables
-\thispagestyle{firststyle}
 \begingroup
 \let\clearpage\relax
 \listoffigures
